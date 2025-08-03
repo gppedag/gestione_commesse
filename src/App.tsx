@@ -11,8 +11,11 @@ const GestioneCommesse = () => {
       </header>
 
       {/* Navigation Tabs */}
-      <nav className="bg-white border-b">
-        {/* ... tabs navigation ... */}
+      <nav className="bg-white border-b p-4 flex gap-4">
+        <button onClick={() => setActiveTab('commesse')}>Commesse</button>
+        <button onClick={() => setActiveTab('costi')}>Costi</button>
+        <button onClick={() => setActiveTab('evasioni')}>Evasioni</button>
+        <button onClick={() => setActiveTab('report')}>Report</button>
       </nav>
 
       {/* Main Content */}
