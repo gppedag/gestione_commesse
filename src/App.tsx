@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Plus, Upload, Download, FileText, Trash2, Edit2, Save, X, ChevronDown, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
 
 const GestioneCommesse = () => {
   const [activeTab, setActiveTab] = useState('commesse');
@@ -61,17 +60,7 @@ const GestioneCommesse = () => {
       </main>
 
       {/* Modali */}
-      {showAddCommessa && <CommessaForm onSave={addCommessa} onCancel={() => setShowAddCommessa(false)} />}
-      {editingCommessa && <CommessaForm commessa={editingCommessa} onSave={(updates) => updateCommessa(editingCommessa.id, updates)} onCancel={() => setEditingCommessa(null)} />}
-      {showAddRiga && <RigaVenditaForm onSave={addRigaVendita} onCancel={() => setShowAddRiga(false)} />}
-      {editingRiga && <RigaVenditaForm riga={editingRiga} onSave={(updates) => updateRigaVendita(editingRiga.id, updates)} onCancel={() => setEditingRiga(null)} />}
-      {showAddCosto && <CostoForm onSave={addCosto} onCancel={() => setShowAddCosto(false)} />}
-      {editingCosto && <CostoForm costo={editingCosto} onSave={(updates) => updateCosto(editingCosto.id, updates)} onCancel={() => setEditingCosto(null)} />}
-      {editingEvasione && <EvasioneForm evasione={editingEvasione} onSave={(updates) => updateEvasione(editingEvasione.id, updates)} onCancel={() => setEditingEvasione(null)} />}
-      {showAddOrdine && <OrdineForm onSave={addOrdine} onCancel={() => setShowAddOrdine(false)} />}
-      {showAddEvasione && <EvasioneForm onSave={addEvasione} onCancel={() => setShowAddEvasione(false)} />}
-      {showImportCSV && <ImportCSVModal onClose={() => setShowImportCSV(false)} />}
-      {showManageCodici && <GestioneCodiciServizio onClose={() => setShowManageCodici(false)} />}
+      {/* Da definire i componenti reali se necessario */}
     </div>
   );
 };
